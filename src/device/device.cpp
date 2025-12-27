@@ -1,0 +1,19 @@
+#include "device.h"
+#include <QBluetoothDeviceInfo>
+#include <QVBoxLayout>
+#include <QLabel>
+
+DeviceWidget::DeviceWidget(const QBluetoothDeviceInfo &info, QWidget *parent) : QWidget(parent), device_info(info) {
+    setupUI();
+}
+
+DeviceWidget::~DeviceWidget() {}
+
+void DeviceWidget::setupUI() {
+    main_layout = new QVBoxLayout(this);
+    QString display_name = device_info.name();
+    if (display_name.isEmpty()) {
+        display_name = "Unknown device";
+    }
+    name_label = new QLabel(display_name);
+}
