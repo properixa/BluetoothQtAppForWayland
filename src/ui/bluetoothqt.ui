@@ -40,7 +40,7 @@
       <item>
        <widget class="QPushButton" name="ScanButton">
         <property name="text">
-         <string>Сканировать </string>
+         <string>Сканировать</string>
         </property>
        </widget>
       </item>

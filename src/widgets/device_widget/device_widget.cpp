@@ -1,4 +1,4 @@
-#include "device.h"
+#include "device_widget.h"
 #include <QBluetoothDeviceInfo>
 #include <QVBoxLayout>
 #include <QLabel>

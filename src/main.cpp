@@ -1,11 +1,10 @@
 #include <QApplication>
 #include <QStyleFactory>
-#include "bluetoothqt.h"
-#include "device/device.h"
+#include "ui/bluetoothqt.h"
+#include "widgets/device_widget/device_widget.h"
 
 int main(int argc, char *argv[]){
     QApplication app(argc, argv);
-    QApplication::setStyle(QStyleFactory::create("Fusion"));
 
     Bluetooth window;
     window.show();

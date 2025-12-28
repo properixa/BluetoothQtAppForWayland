@@ -14,9 +14,9 @@ qt_standard_project_setup()
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
-    src/bluetoothqt.ui
-    src/bluetoothqt.cpp
-    src/device/device.cpp
+    src/ui/bluetoothqt.ui
+    src/ui/bluetoothqt.cpp
+    src/widgets/device_widget/device_widget.cpp
     resources/icons.qrc
 )
 
