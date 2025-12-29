@@ -40,6 +40,10 @@ bool DeviceScanner::is_scanning() const {
 }
 
 void DeviceScanner::on_device_discovered(const QBluetoothDeviceInfo &device) {
+    if (device.serviceClasses() == QBluetoothDeviceInfo::NoService) {
+        qDebug() << "Skipped device with no service (name: " << device.name() << ")";
+        return;
+    }
     emit device_discovered(device);
     qDebug() << "DISCOVERED NEW DEVICE";
 }

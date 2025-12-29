@@ -20,9 +20,9 @@ public:
 private:
     void setupUI();
 
-    QBluetoothDeviceInfo *_device_info;
-    QVBoxLayout *main_layout;
-    QLabel *name_label;
+    QBluetoothDeviceInfo _device_info;
+    QVBoxLayout *_main_layout;
+    QLabel *_name_label;
 };
 
 #endif

@@ -10,14 +10,16 @@ DeviceWidget::DeviceWidget(const QBluetoothDeviceInfo &info, QWidget *parent) : 
 DeviceWidget::~DeviceWidget() {}
 
 void DeviceWidget::setupUI() {
-    main_layout = new QVBoxLayout(this);
-    QString display_name = _device_info->name();
+    _main_layout = new QVBoxLayout(this);
+    QString display_name = _device_info.name();
     if (display_name.isEmpty()) {
         display_name = "Unknown device";
     }
-    name_label = new QLabel(display_name);
+    _name_label = new QLabel(display_name);
+
+    _main_layout->addWidget(_name_label);
 }
 
 void DeviceWidget::update_info(const QBluetoothDeviceInfo &device) {
-    
+    _device_info = device;
 }

@@ -30,6 +30,10 @@ private:
     Ui::Bluetooth *ui;
     DeviceScanner *_device_scanner;
     QMap<QString, DeviceWidget*> _devices_list;
+    QVBoxLayout *_scroll_layout;
+
+    void setup_scroll_window();
+    void setup_already_discovered_devices();
 };
 
 #endif
