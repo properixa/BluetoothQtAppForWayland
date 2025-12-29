@@ -15,10 +15,12 @@ public:
     explicit DeviceWidget(const QBluetoothDeviceInfo &device_info, QWidget *parent = nullptr);
     ~DeviceWidget();
 
+    void update_info(const QBluetoothDeviceInfo &device);
+
 private:
     void setupUI();
 
-    QBluetoothDeviceInfo device_info;
+    QBluetoothDeviceInfo *_device_info;
     QVBoxLayout *main_layout;
     QLabel *name_label;
 };
