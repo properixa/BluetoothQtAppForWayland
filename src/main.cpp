@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <QStyleFactory>
 #include "ui/bluetoothqt.h"
-#include "widgets/device_widget/device_widget.h"
+#include "utils/device_scanner/device_scanner.h"
 
 int main(int argc, char *argv[]){
     QApplication app(argc, argv);

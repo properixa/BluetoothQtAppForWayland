@@ -17,6 +17,7 @@ add_executable(${PROJECT_NAME}
     src/ui/bluetoothqt.ui
     src/ui/bluetoothqt.cpp
     src/widgets/device_widget/device_widget.cpp
+    src/utils/device_scanner/device_scanner.cpp
     resources/icons.qrc
 )
 

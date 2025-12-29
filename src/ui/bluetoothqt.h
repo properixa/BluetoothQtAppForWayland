@@ -17,6 +17,9 @@ public:
     explicit Bluetooth(QWidget *parent = nullptr);
     ~Bluetooth();
 
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
 private:
     Ui::Bluetooth *ui;
 };
